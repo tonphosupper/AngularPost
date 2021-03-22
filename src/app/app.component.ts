@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularPost';
+  
+  searchPosts($event: any) {
+    if ($event.keyCode === 13) {
+      $event.preventDefault();
+      $event.target.parentElement.submit();
+    }
+  }
 }
